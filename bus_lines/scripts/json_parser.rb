@@ -24,8 +24,8 @@ File.open($read_file_name, 'r') .readlines.each do |line|
 	end	
 	busArray = tmpArray 
 	id =	busArray.shift
-
-	h = Hash["bus_id" =>id,"routes" => busArray]
+	bus_type = busArray.shift
+	h = Hash["bus_id" =>id,"bus_type"=>bus_type,"routes" => busArray]
 	# puts h.to_json 
 	$ary << h 
 
