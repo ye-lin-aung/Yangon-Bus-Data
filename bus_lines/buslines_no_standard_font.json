@@ -1,13 +1,6 @@
 {
   "buses": [
     {
-      "bus_id": "bus_id",
-      "bus_type": "bus_type",
-      "routes": [
-        "routes"
-      ]
-    },
-    {
       "bus_id": "1",
       "bus_type": "0",
       "routes": [

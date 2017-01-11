@@ -8,9 +8,9 @@ if File.exist?($write_file_name) then
 end
 file_comment = File.open($write_file_name,"a+")  
 $ary = Array.new 
-
+$count=0
 File.open($read_file_name, 'r') .readlines.each do |line|
-	
+	if($count > 0)then 
 	if line.include?("\n")then
 	line["\n"]=""
 	end
@@ -28,7 +28,8 @@ File.open($read_file_name, 'r') .readlines.each do |line|
 	h = Hash["bus_id" =>id,"bus_type"=>bus_type,"routes" => busArray]
 	# puts h.to_json 
 	$ary << h 
-
+	end
+	$count = $count + 1
 
 end
 jsonHash = Hash["buses",$ary]
